@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <aside>
+      <h2>To-Do</h2>
+      <nav>
+        <button onclick="showPanel('today')">Today</button>
+        <button onclick="showPanel('upcoming')">Upcoming</button>
+        <button onclick="showPanel('completed')">Completed</button>
+      </nav>
+    </aside>
+
+    <main>
+      <section id="form-section">
+        <h2>Add New Task</h2>
+        <form id="taskForm">
+          <input type="text" id="taskName" placeholder="Task Name*" required>
+          <input type="email" id="email" placeholder="Email*" required>
+          <input type="date" id="dueDate" required>
+          <input type="text" id="category" placeholder="Category">
+          <textarea id="description" placeholder="Task Description"></textarea>
+          <input type="text" id="location" placeholder="Location">
+          <input type="text" id="priority" placeholder="Priority">
+          <input type="text" id="assignedTo" placeholder="Assigned To">
+          <input type="text" id="status" placeholder="Status">
+          <input type="time" id="dueTime">
+          <input type="number" id="estTime" placeholder="Est. Time (hrs)">
+          <input type="text" id="tag" placeholder="Tag">
+          <input type="url" id="link" placeholder="Reference Link">
+          <input type="color" id="color">
+          <input type="text" id="notes" placeholder="Notes">
+          <button type="submit">Add Task</button>
+        </form>
+      </section>
+
+      <section id="taskPanels">
+        <div id="today" class="panel active"><h2>Today</h2></div>
+        <div id="upcoming" class="panel"><h2>Upcoming</h2></div>
+        <div id="completed" class="panel"><h2>Completed</h2></div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
